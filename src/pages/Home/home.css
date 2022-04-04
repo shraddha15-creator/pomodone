@@ -1,0 +1,33 @@
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.user-greeting {
+    align-self: end;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.hero-img {
+    width: 40%;
+}
+
+.btn-add-task {
+    background-color: var(--primary-color);
+    padding: .7rem 3rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 1px 1px 5px black;
+    cursor: pointer;
+}
+
+.btn-add-task:hover {
+    background-color: var(--primary-light);
+    border: 1px solid var(--primary-color);
+}

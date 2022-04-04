@@ -1,0 +1,43 @@
+.pomo-navbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid var(--gray);
+    padding-right: 1rem;
+}
+
+.brand-details {
+    display: flex;
+    align-items: end;
+}
+
+.brand-logo-png {
+    width: 25%;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-weight: 600;
+    margin-top: 5rem;
+}
+
+.links {
+    color: var(--gray);
+}
+
+.links:hover {
+    color: black;
+}
+
+.navbar-change-theme {
+    padding: 5rem 0;
+    font-size: .7rem;
+}

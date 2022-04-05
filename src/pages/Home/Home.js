@@ -13,7 +13,7 @@ const Home = () => {
 				<img src={HeroImg} alt="hero-image" className="hero-img" />
 				<Link to="/tasks">
 					<button className="btn-add-task">
-						Add Task <i class="fa fa-plus-circle"></i>
+						Add Task <i className="fa fa-plus-circle"></i>
 					</button>
 				</Link>
 			</div>

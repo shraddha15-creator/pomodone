@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import "./task.css";
-import { Link } from "react-router-dom";
 
 const Tasks = () => {
 	const [todos, setTodos] = useState("");
@@ -65,7 +65,7 @@ const Tasks = () => {
 								onChange={changeHandler}
 							/>
 
-							<button className="button">
+							<button className="button" type="submit">
 								{isEditing ? (
 									<i className="fa fa-plus-circle"></i>
 								) : (

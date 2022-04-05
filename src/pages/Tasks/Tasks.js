@@ -5,7 +5,6 @@ import "./task.css";
 
 const getLocalStorage = () => {
 	let data = localStorage.getItem("myTodos");
-	console.log(data);
 
 	if (data) {
 		return JSON.parse(localStorage.getItem("myTodos"));

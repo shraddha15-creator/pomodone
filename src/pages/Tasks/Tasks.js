@@ -17,7 +17,7 @@ const Tasks = () => {
 					tasksDB.map(({ id, title }) => {
 						return (
 							<div className="todo-items" key={id}>
-								<h4>{title}</h4>
+								<div>{title}</div>
 								<div className="edit-delete-buttons">
 									<button className="button btn-edit-delete">
 										<i className="fas fa-edit"></i>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./task.css";
-import tasksDB from "../../tasksDB";
+import { Link } from "react-router-dom";
 
 const Tasks = () => {
 	const [todos, setTodos] = useState("");
@@ -79,22 +79,24 @@ const Tasks = () => {
 				{todoList &&
 					todoList.map(({ id, title }) => {
 						return (
-							<div className="todo-items" key={id}>
-								<div>{title}</div>
-								<div className="edit-delete-buttons">
-									<button
-										className="button btn-edit-delete"
-										onClick={() => editHandler(id)}
-									>
-										<i className="fas fa-edit"></i>
-									</button>
-									<button
-										className="button btn-edit-delete"
-										onClick={() => deleteHandler(id)}
-									>
-										<i className="fas fa-trash-alt"></i>
-									</button>
-								</div>
+							<div key={id}>
+								<Link to="/timer" state={{ title }} className="todo-items">
+									<div>{title}</div>
+									<div className="edit-delete-buttons">
+										<button
+											className="button btn-edit-delete"
+											onClick={() => editHandler(id)}
+										>
+											<i className="fas fa-edit"></i>
+										</button>
+										<button
+											className="button btn-edit-delete"
+											onClick={() => deleteHandler(id)}
+										>
+											<i className="fas fa-trash-alt"></i>
+										</button>
+									</div>
+								</Link>
 							</div>
 						);
 					})}

@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Settings from "./pages/Settings/Settings";
 import Tasks from "./pages/Tasks/Tasks";
-import Timer from "./pages/Timer/Timer";
+import Pomodoro from "./pages/Timer/Pomodoro";
 
 function App() {
 	return (
@@ -14,7 +14,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/tasks" element={<Tasks />} />
-					<Route path="/timer" element={<Timer />} />
+					<Route path="/pomodoro" element={<Pomodoro />} />
 					<Route path="/settings" element={<Settings />} />
 				</Routes>
 			</BrowserRouter>

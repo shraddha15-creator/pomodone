@@ -16,9 +16,9 @@ const Navbar = () => {
 						<i className="fas fa-tasks"></i> Task
 					</span>
 				</Link>
-				<Link to="/timer">
+				<Link to="/pomodoro">
 					<span className="links">
-						<i className="fa fa-stopwatch"></i> Timer
+						<i className="fa fa-stopwatch"></i> Pomodoro
 					</span>
 				</Link>
 				<Link to="/settings">

@@ -94,7 +94,7 @@ const Tasks = () => {
 					todoList.map(({ id, title }) => {
 						return (
 							<div key={id} className="todo-items">
-								<Link to="/timer" state={{ title }}>
+								<Link to="/pomodoro" state={{ title }}>
 									<div>{title}</div>
 								</Link>
 								<div className="edit-delete-buttons">

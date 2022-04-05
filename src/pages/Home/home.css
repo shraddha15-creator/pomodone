@@ -25,9 +25,9 @@
     font-weight: 500;
     box-shadow: 1px 1px 5px black;
     cursor: pointer;
+    color: var(--primary-light)
 }
 
 .btn-add-task:hover {
-    background-color: var(--primary-light);
     border: 1px solid var(--primary-color);
 }

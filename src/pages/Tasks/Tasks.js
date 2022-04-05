@@ -7,10 +7,17 @@ const Tasks = () => {
 		<>
 			<div className="tasks-container">
 				<div className="title-and-btn">
-					<h2>To-Do List</h2>
-					<button className="button">
-						<i class="fa fa-plus-circle"></i>
-					</button>
+					<h2>My To-Do</h2>
+					<div className="input-and-btn">
+						<input
+							type="text"
+							className="add-todo-input"
+							placeholder="Add todo"
+						/>
+						<button className="button">
+							<i class="fa fa-plus-circle"></i>
+						</button>
+					</div>
 				</div>
 
 				{tasksDB &&

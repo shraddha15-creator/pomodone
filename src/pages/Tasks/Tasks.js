@@ -79,24 +79,24 @@ const Tasks = () => {
 				{todoList &&
 					todoList.map(({ id, title }) => {
 						return (
-							<div key={id}>
-								<Link to="/timer" state={{ title }} className="todo-items">
+							<div key={id} className="todo-items">
+								<Link to="/timer" state={{ title }}>
 									<div>{title}</div>
-									<div className="edit-delete-buttons">
-										<button
-											className="button btn-edit-delete"
-											onClick={() => editHandler(id)}
-										>
-											<i className="fas fa-edit"></i>
-										</button>
-										<button
-											className="button btn-edit-delete"
-											onClick={() => deleteHandler(id)}
-										>
-											<i className="fas fa-trash-alt"></i>
-										</button>
-									</div>
 								</Link>
+								<div className="edit-delete-buttons">
+									<button
+										className="button btn-edit-delete"
+										onClick={() => editHandler(id)}
+									>
+										<i className="fas fa-edit"></i>
+									</button>
+									<button
+										className="button btn-edit-delete"
+										onClick={() => deleteHandler(id)}
+									>
+										<i className="fas fa-trash-alt"></i>
+									</button>
+								</div>
 							</div>
 						);
 					})}

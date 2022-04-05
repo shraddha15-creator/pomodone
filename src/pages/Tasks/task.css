@@ -2,30 +2,48 @@
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin: 1rem;
-  padding: 3rem 1rem;
+  margin: 0 1rem;
+  padding: 0 3rem;
   border: 2px solid var(--primary-color);
   border-radius: 15px;
 }
 
 .title-and-btn {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  color: var(--gray)
+}
+
+.input-and-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.add-todo-input {
+  outline: none;
+  width: 93%;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  font-size: 1.1rem;
 }
 
 .todo-items {
   display: flex;
-  justify-content: space-around;
-  padding: .5rem 0;
+  justify-content: space-between;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--primary-color);
-
+  font-weight: 800;
+  color: var(--gray);
 }
 
 .button {
   background-color: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 2.5rem;
   cursor: pointer;
 }
 

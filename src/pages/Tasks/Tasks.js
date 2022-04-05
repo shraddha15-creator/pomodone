@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import "./task.css";
 
+const getLocalStorage = () => {
+	let data = localStorage.getItem("myTodos");
+
+	if (data) {
+		return JSON.parse(localStorage.getItem("myTodos"));
+	} else {
+		return [];
+	}
+};
+
 const Tasks = () => {
 	const [todos, setTodos] = useState("");
-	const [todoList, setTodoList] = useState([]);
+	const [todoList, setTodoList] = useState(getLocalStorage());
 	const [isEditing, setIsEditing] = useState(true);
 	const [updatedTodo, setUpdatedTodo] = useState(null);
 	const [isCompleted, setIsCompleted] = useState(true);
+
+	useEffect(() => {
+		localStorage.setItem("myTodos", JSON.stringify(todoList));
+	}, [todoList]);
 
 	const changeHandler = (e) => setTodos(e.target.value);
 

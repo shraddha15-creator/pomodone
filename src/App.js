@@ -15,6 +15,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/tasks" element={<Tasks />} />
 					<Route path="/pomodoro" element={<Pomodoro />} />
+					<Route path="/pomodoro/:task" element={<Pomodoro />} />
 					<Route path="/settings" element={<Settings />} />
 				</Routes>
 			</BrowserRouter>

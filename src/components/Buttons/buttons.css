@@ -1,0 +1,17 @@
+.timer-icon {
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.settings-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.2rem 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--primary-light);
+  margin-bottom: .5rem;
+}

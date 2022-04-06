@@ -21,11 +21,14 @@ const Navbar = () => {
 						<i className="fa fa-stopwatch"></i> Pomodoro
 					</span>
 				</Link>
-				<Link to="/settings">
+
+				{/* will work on this later on  */}
+
+				{/* <Link to="/settings">
 					<span className="links">
 						<i className="fas fa-cogs"></i> Settings
 					</span>
-				</Link>
+				</Link> */}
 			</div>
 			<div className="navbar-change-theme">
 				<i className="fas fa-sun"></i> Change theme{" "}

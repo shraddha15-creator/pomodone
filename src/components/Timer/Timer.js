@@ -27,7 +27,6 @@ const Timer = () => {
 	});
 
 	const playHandler = () => {
-		console.log("playhandler");
 		setInterval(() => {
 			setSeconds(seconds + 1);
 

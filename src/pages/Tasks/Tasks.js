@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import Helmet from "react-helmet";
 import "./task.css";
 
 const getLocalStorage = () => {
@@ -18,7 +19,6 @@ const Tasks = () => {
 	const [todoList, setTodoList] = useState(getLocalStorage());
 	const [isEditing, setIsEditing] = useState(true);
 	const [updatedTodo, setUpdatedTodo] = useState(null);
-	const [isCompleted, setIsCompleted] = useState(true);
 
 	useEffect(() => {
 		localStorage.setItem("myTodos", JSON.stringify(todoList));
@@ -65,6 +65,9 @@ const Tasks = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Tasks | Pomodone</title>
+			</Helmet>
 			<div className="tasks-container">
 				<div className="title-and-btn">
 					<h2>My To-Do</h2>

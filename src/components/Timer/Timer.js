@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Helmet from "react-helmet";
+import { Link } from "react-router-dom";
 import PauseButton from "../Buttons/PauseButton";
 import PlayButton from "../Buttons/PlayButton";
 import ResetButton from "../Buttons/ResetButton";
@@ -49,7 +50,7 @@ const Timer = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{`${minutes} : ${seconds} 🏆 | Pomodoro`}</title>
+				<title>{`${minutes} : ${seconds} 👩‍💻 | Pomodone`}</title>
 			</Helmet>
 			<div className="timer">
 				<CircularProgressbar
@@ -67,9 +68,11 @@ const Timer = () => {
 					<PlayButton playHandler={playHandler} />
 					<PauseButton pauseHandler={pausehandler} />
 				</div>
-				<div>
-					<Settings />
-				</div>
+				{/* <div>
+					<Link to="/settings">
+						<Settings />
+					</Link>
+				</div> */}
 			</div>
 		</>
 	);

@@ -19,6 +19,7 @@ const Tasks = () => {
 	const [todoList, setTodoList] = useState(getLocalStorage());
 	const [isEditing, setIsEditing] = useState(true);
 	const [updatedTodo, setUpdatedTodo] = useState(null);
+	console.log(todoList);
 
 	useEffect(() => {
 		localStorage.setItem("myTodos", JSON.stringify(todoList));
@@ -97,7 +98,7 @@ const Tasks = () => {
 					todoList.map(({ id, title }) => {
 						return (
 							<div key={id} className="todo-items">
-								<Link to="/pomodoro" state={{ title }}>
+								<Link to={`/pomodoro/${id}`} state={{ title }}>
 									<div>{title}</div>
 								</Link>
 								<div className="edit-delete-buttons">

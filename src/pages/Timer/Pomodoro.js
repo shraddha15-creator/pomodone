@@ -1,9 +1,19 @@
 import React from "react";
-import Timer from "../../components/Timer/Timer";
 import Helmet from "react-helmet";
+import { useParams } from "react-router-dom";
+import PomoTask from "../../components/PomoTask/PomoTask";
+import Timer from "../../components/Timer/Timer";
+import Tasks from "../Tasks/Tasks";
 import "./pomodoro.css";
 
 const Pomodoro = () => {
+	const { id } = useParams();
+	const getTodoData = (todoData, todoId) => {
+		return todoData && todoData.find((todo) => todo.id === todoId);
+	};
+
+	const todoData = getTodoData(Tasks.todoList, id);
+
 	return (
 		<>
 			<Helmet>
@@ -14,19 +24,8 @@ const Pomodoro = () => {
 					<h3>Let's Focus!</h3>
 					<Timer />
 				</div>
-				<div className="pomodoro-task-container">
-					<div className="pomo-task-item">
-						<h2>Complete Homework</h2>
-						<p className="pomo-task-description">
-							Let's complete the Homework today!
-						</p>
-						<div className="pomo-tags">
-							<h5 className="pomo-tag-item">#project</h5>
-							<h5 className="pomo-tag-item">#work</h5>
-							<h5 className="pomo-tag-item">#deadline</h5>
-						</div>
-					</div>
-				</div>
+
+				<PomoTask {...todoData} />
 			</div>
 		</>
 	);

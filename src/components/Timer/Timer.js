@@ -13,7 +13,6 @@ const Timer = () => {
 	let timer;
 
 	useEffect(() => {
-		let timer;
 		timer = setInterval(() => {
 			setSeconds(seconds - 1);
 

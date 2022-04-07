@@ -3,8 +3,9 @@ import "./buttons.css";
 
 const PlayButton = ({ playHandler }) => {
 	return (
-		<div>
+		<div className="btn-icon-txt">
 			<i className="fas fa-play-circle timer-icon" onClick={playHandler}></i>
+			<p>Play</p>
 		</div>
 	);
 };

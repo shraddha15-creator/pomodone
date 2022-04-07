@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
 import { useParams } from "react-router-dom";
 import PomoTask from "../../components/PomoTask/PomoTask";
 import Timer from "../../components/Timer/Timer";
-import Tasks from "../Tasks/Tasks";
 import "./pomodoro.css";
 
+const getLocalStorage = () => {
+	let data = localStorage.getItem("myTodos");
+	console.log(data);
+
+	if (data) {
+		return JSON.parse(localStorage.getItem("myTodos"));
+	} else {
+		return [];
+	}
+};
+
 const Pomodoro = () => {
-	const { id } = useParams();
-	const getTodoData = (todoData, todoId) => {
-		return todoData && todoData.find((todo) => todo.id === todoId);
+	const [todoList, setTodoList] = useState(getLocalStorage());
+	const { task } = useParams();
+
+	const getProductsData = (todoData, todoId) => {
+		return todoData.find((todo) => todo.id === todoId);
 	};
 
-	const todoData = getTodoData(Tasks.todoList, id);
+	const myTodos = getProductsData(todoList, task);
+	console.log(myTodos);
+
+	useEffect(() => {
+		localStorage.setItem("myTodos", JSON.stringify(todoList));
+		// console.log(todoList);
+	}, [todoList]);
 
 	return (
 		<>
@@ -24,8 +42,7 @@ const Pomodoro = () => {
 					<h3>Let's Focus!</h3>
 					<Timer />
 				</div>
-
-				<PomoTask {...todoData} />
+				<PomoTask {...myTodos} />
 			</div>
 		</>
 	);

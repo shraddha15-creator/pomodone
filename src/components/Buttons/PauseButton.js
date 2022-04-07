@@ -3,8 +3,9 @@ import "./buttons.css";
 
 const PauseButton = ({ pauseHandler }) => {
 	return (
-		<div>
-			<i className="fas fa-pause-circle timer-icon" onClick={pauseHandler}></i>
+		<div className="btn-icon-txt">
+			<i className="far fa-pause-circle timer-icon" onClick={pauseHandler}></i>
+			<p>Pause</p>
 		</div>
 	);
 };

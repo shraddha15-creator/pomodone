@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Helmet from "react-helmet";
@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import PauseButton from "../Buttons/PauseButton";
 import PlayButton from "../Buttons/PlayButton";
 import ResetButton from "../Buttons/ResetButton";
-import Settings from "../Buttons/Settings";
 import "./timer.css";
 
 const Timer = () => {
@@ -67,11 +66,6 @@ const Timer = () => {
 					<PlayButton playHandler={playHandler} />
 					<PauseButton pauseHandler={pausehandler} />
 				</div>
-				{/* <div>
-					<Link to="/settings">
-						<Settings />
-					</Link>
-				</div> */}
 			</div>
 		</>
 	);

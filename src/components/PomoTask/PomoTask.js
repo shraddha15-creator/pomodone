@@ -1,13 +1,15 @@
 import React from "react";
+import "./pomoTask.css";
 
-const PomoTask = ({ id, title }) => {
+const PomoTask = ({ title }) => {
+	console.log(title);
 	return (
 		<>
 			<div className="pomodoro-task-container">
 				<div className="pomo-task-item">
-					<h2>Complete Homework</h2>
+					<h2>{title}</h2>
 					<p className="pomo-task-description">
-						Let's complete the Homework today!
+						Let's complete the {title} today!
 					</p>
 					<div className="pomo-tags">
 						<h5 className="pomo-tag-item">#project</h5>

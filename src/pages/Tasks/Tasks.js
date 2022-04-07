@@ -19,7 +19,6 @@ const Tasks = () => {
 	const [todoList, setTodoList] = useState(getLocalStorage());
 	const [isEditing, setIsEditing] = useState(true);
 	const [updatedTodo, setUpdatedTodo] = useState(null);
-	console.log(todoList);
 
 	useEffect(() => {
 		localStorage.setItem("myTodos", JSON.stringify(todoList));

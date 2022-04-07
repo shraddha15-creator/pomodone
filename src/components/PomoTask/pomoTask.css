@@ -1,0 +1,31 @@
+.pomodoro-task-container {
+  width: 50%;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+}
+
+.pomo-task-item {
+  padding-top: 3rem;
+}
+
+.pomo-task-description {
+  padding-top: 3rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.pomo-tags {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.pomo-tag-item {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  color: var(--gray);
+  padding: .5rem 1rem;
+}

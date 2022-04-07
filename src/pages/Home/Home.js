@@ -10,7 +10,7 @@ const Home = () => {
 			<div className="homepage-container">
 				<span className="user-greeting">Hi, Shraddha</span>
 
-				<img src={HeroImg} alt="hero-image" className="hero-img" />
+				<img src={HeroImg} alt="hero-banner" className="hero-img" />
 				<Link to="/tasks">
 					<button className="btn-add-task">
 						Add Task <i className="fa fa-plus-circle"></i>

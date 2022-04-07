@@ -17,7 +17,7 @@ const getLocalStorage = () => {
 };
 
 const Pomodoro = () => {
-	const [todoList, setTodoList] = useState(getLocalStorage());
+	const [todoList] = useState(getLocalStorage());
 	const { task } = useParams();
 
 	const getProductsData = (todoData, todoId) => {

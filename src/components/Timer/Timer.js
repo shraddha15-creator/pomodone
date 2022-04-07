@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Helmet from "react-helmet";
-import { Link } from "react-router-dom";
 import PauseButton from "../Buttons/PauseButton";
 import PlayButton from "../Buttons/PlayButton";
 import ResetButton from "../Buttons/ResetButton";
@@ -23,7 +22,7 @@ const Timer = () => {
 			}
 		}, 1000);
 		return () => clearInterval(timer);
-	});
+	}, [seconds]);
 
 	const playHandler = () => {
 		setInterval(() => {

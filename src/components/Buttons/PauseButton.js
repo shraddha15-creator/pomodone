@@ -1,7 +1,7 @@
 import React from "react";
 import "./buttons.css";
 
-const PauseButton = ({ pauseHandler }) => {
+export const PauseButton = ({ pauseHandler }) => {
 	return (
 		<div className="btn-icon-txt">
 			<i className="far fa-pause-circle timer-icon" onClick={pauseHandler}></i>
@@ -9,5 +9,3 @@ const PauseButton = ({ pauseHandler }) => {
 		</div>
 	);
 };
-
-export default PauseButton;

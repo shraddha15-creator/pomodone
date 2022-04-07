@@ -1,7 +1,7 @@
 import React from "react";
 import "./buttons.css";
 
-const ResetButton = ({ resetHandler }) => {
+export const ResetButton = ({ resetHandler }) => {
 	return (
 		<div className="btn-icon-txt">
 			<i className="fas fa-redo timer-icon" onClick={resetHandler}></i>
@@ -9,5 +9,3 @@ const ResetButton = ({ resetHandler }) => {
 		</div>
 	);
 };
-
-export default ResetButton;

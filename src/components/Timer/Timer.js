@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Helmet from "react-helmet";
-import PauseButton from "../Buttons/PauseButton";
-import PlayButton from "../Buttons/PlayButton";
-import ResetButton from "../Buttons/ResetButton";
+// import PauseButton from "../Buttons/PauseButton";
+// import PlayButton from "../Buttons/PlayButton";
+// import ResetButton from "../Buttons/ResetButton";
+import { PauseButton, PlayButton, ResetButton } from "../Buttons";
 import "./timer.css";
 
 const Timer = () => {

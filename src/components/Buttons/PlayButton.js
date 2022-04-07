@@ -1,7 +1,7 @@
 import React from "react";
 import "./buttons.css";
 
-const PlayButton = ({ playHandler }) => {
+export const PlayButton = ({ playHandler }) => {
 	return (
 		<div className="btn-icon-txt">
 			<i className="fas fa-play-circle timer-icon" onClick={playHandler}></i>
@@ -9,5 +9,3 @@ const PlayButton = ({ playHandler }) => {
 		</div>
 	);
 };
-
-export default PlayButton;

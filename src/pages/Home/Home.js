@@ -8,7 +8,7 @@ const Home = () => {
 	return (
 		<>
 			<div className="homepage-container">
-				<span className="user-greeting">Hi, Shraddha</span>
+				<span className="user-greeting">Hi, User!</span>
 
 				<img src={HeroImg} alt="hero-banner" className="hero-img" />
 				<Link to="/tasks">

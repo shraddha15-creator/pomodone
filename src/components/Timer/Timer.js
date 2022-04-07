@@ -10,9 +10,9 @@ import "./timer.css";
 const Timer = () => {
 	const [seconds, setSeconds] = useState(0);
 	const [minutes, setMinutes] = useState(30);
-	let timer;
 
 	useEffect(() => {
+		let timer;
 		timer = setInterval(() => {
 			setSeconds(seconds - 1);
 

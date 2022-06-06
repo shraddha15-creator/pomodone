@@ -1,8 +1,12 @@
 .homepage-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     align-items: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    margin: 0 1rem;
+    padding: 2rem;
 }
 
 .user-greeting {

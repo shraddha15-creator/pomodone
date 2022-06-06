@@ -7,7 +7,7 @@ import "./home.css";
 const Home = () => {
 	return (
 		<>
-			<div className="homepage-container">
+			<div className="homepage-container ">
 				<span className="user-greeting">Hey, Welcome back!</span>
 
 				<img src={HeroImg} alt="hero-banner" className="hero-img" />

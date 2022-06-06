@@ -68,7 +68,7 @@ const Tasks = () => {
 			<Helmet>
 				<title>Tasks | Pomodone</title>
 			</Helmet>
-			<div className="tasks-container">
+			<div className="tasks-container ">
 				<div className="title-and-btn">
 					<h2>My To-Do</h2>
 					<form onSubmit={submitHandler}>

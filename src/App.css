@@ -16,8 +16,8 @@ body {
 
 .App {
     display: flex;
-    padding: 1rem 3rem;
-    height: 94.40vh;
+    padding: 2rem 3rem;
+    height: 90vh;
 }
 
 .dark-mode {

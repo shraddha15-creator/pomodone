@@ -1,14 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import { useTheme } from "./Context/theme-context";
 import Home from "./pages/Home/Home";
 import Settings from "./pages/Settings/Settings";
 import Tasks from "./pages/Tasks/Tasks";
 import Pomodoro from "./pages/Timer/Pomodoro";
 
 function App() {
+	const { darkMode } = useTheme();
+
 	return (
-		<div className="App">
+		<div className={`App ${darkMode ? "dark-mode" : "light-mode"}`}>
 			<BrowserRouter>
 				<Navbar />
 				<Routes>

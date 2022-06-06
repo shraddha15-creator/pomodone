@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../Context/theme-context";
 import "./navbar.css";
 
 const Navbar = () => {
+	const { darkMode, setDarkMode } = useTheme();
 	return (
-		<div className="pomo-navbar-container">
+		<div
+			className={`pomo-navbar-container ${
+				darkMode ? "dark-mode" : "light-mode"
+			}`}
+		>
 			<div className="brand-details">
 				<Link to="/">
 					<span className="brand-name">pomoDone!</span>
@@ -30,9 +36,15 @@ const Navbar = () => {
 					</span>
 				</Link> */}
 			</div>
-			<div className="navbar-change-theme">
-				<i className="fas fa-sun"></i> Change theme{" "}
-				<i className="fas fa-moon"></i>
+			<div
+				className="navbar-change-theme"
+				onClick={() => setDarkMode((prev) => !prev)}
+			>
+				{darkMode ? (
+					<i className="fas fa-sun"></i>
+				) : (
+					<i className="fas fa-moon"></i>
+				)}
 			</div>
 		</div>
 	);

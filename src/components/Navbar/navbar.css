@@ -37,6 +37,7 @@
 }
 
 .navbar-change-theme {
-    padding: 5rem 0;
-    font-size: .7rem;
+    padding: 3rem 0;
+    font-size: 1.5rem;
+    transition: all .5s ease-in;
 }

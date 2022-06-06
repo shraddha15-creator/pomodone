@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import Helmet from "react-helmet";
 import "./task.css";
+import { useTheme } from "../../Context/theme-context";
 
 const getLocalStorage = () => {
 	let data = localStorage.getItem("myTodos");
@@ -15,6 +16,7 @@ const getLocalStorage = () => {
 };
 
 const Tasks = () => {
+	const { darkMode } = useTheme();
 	const [todos, setTodos] = useState("");
 	const [todoList, setTodoList] = useState(getLocalStorage());
 	const [isEditing, setIsEditing] = useState(true);
@@ -68,9 +70,13 @@ const Tasks = () => {
 			<Helmet>
 				<title>Tasks | Pomodone</title>
 			</Helmet>
-			<div className="tasks-container">
+			<div
+				className={`tasks-container ${darkMode ? "dark-mode" : "light-mode"}`}
+			>
 				<div className="title-and-btn">
-					<h2>My To-Do</h2>
+					<h2 className={` ${darkMode ? "dark-mode" : "light-mode"}`}>
+						My To-Do
+					</h2>
 					<form onSubmit={submitHandler}>
 						<div className="input-and-btn">
 							<input
@@ -97,7 +103,11 @@ const Tasks = () => {
 					todoList.map(({ id, title }) => {
 						return (
 							<div key={id} className="todo-items">
-								<Link to={`/pomodoro/${id}`} state={{ title }}>
+								<Link
+									to={`/pomodoro/${id}`}
+									state={{ title }}
+									className={` ${darkMode ? "dark-mode" : "light-mode"}`}
+								>
 									<div>{title}</div>
 								</Link>
 								<div className="edit-delete-buttons">

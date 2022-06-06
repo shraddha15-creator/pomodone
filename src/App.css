@@ -4,7 +4,7 @@
 :root {
     --primary-color: #2D27DC;
     --primary-light: #FDFCFE;
-    --primary-dark: #141414;
+    --primary-dark: #222222;
     --gray: #575761;
 }
 
@@ -16,5 +16,11 @@ body {
 
 .App {
     display: flex;
-    padding: 3rem;
+    padding: 2rem 3rem;
+    height: 90vh;
+}
+
+.dark-mode {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
 }

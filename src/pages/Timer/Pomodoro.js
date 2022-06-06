@@ -37,7 +37,7 @@ const Pomodoro = () => {
 			<Helmet>
 				<title>Pomodone</title>
 			</Helmet>
-			<div className="pomodoro-container">
+			<div className="pomodoro-container ">
 				<div className="timer">
 					<h3>Let's Focus!</h3>
 					<Timer />

@@ -2,45 +2,43 @@ import React, { useEffect, useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Helmet from "react-helmet";
-// import PauseButton from "../Buttons/PauseButton";
-// import PlayButton from "../Buttons/PlayButton";
-// import ResetButton from "../Buttons/ResetButton";
 import { PauseButton, PlayButton, ResetButton } from "../Buttons";
 import "./timer.css";
 
 const Timer = () => {
 	const [seconds, setSeconds] = useState(0);
 	const [minutes, setMinutes] = useState(30);
-	let timer;
+	const [playPause, setPlayPause] = useState("");
 
 	useEffect(() => {
-		timer = setInterval(() => {
-			setSeconds(seconds - 1);
+		let newTimer;
 
-			if (seconds === 0) {
-				setMinutes(minutes - 1);
-				setSeconds(59 - 1);
-			}
-		}, 1000);
-		return () => clearInterval(timer);
-	}, [seconds]);
+		if (playPause === "Play") {
+			newTimer = setTimeout(() => {
+				if (seconds === 59 && playPause !== "Pause") {
+					setSeconds((seconds) => seconds - 1);
+					setMinutes((minutes) => minutes - 1);
+				} else if (seconds === 0) {
+					setSeconds(59);
+				} else {
+					setSeconds((seconds) => seconds - 1);
+				}
+			}, 1000);
+		}
+
+		return () => clearInterval(newTimer);
+	}, [seconds, playPause]);
 
 	const playHandler = () => {
-		setInterval(() => {
-			setSeconds(seconds + 1);
-
-			if (seconds === 59) {
-				setMinutes(minutes - 1);
-				setSeconds(0);
-			}
-		}, 1000);
+		setPlayPause("Play");
 	};
 
 	const pausehandler = () => {
-		clearInterval(timer);
+		setPlayPause("Pause");
 	};
 
 	const resetHandler = () => {
+		setPlayPause("Pause");
 		setSeconds(0);
 		setMinutes(30);
 	};
@@ -48,13 +46,17 @@ const Timer = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{`${minutes} : ${seconds} 👩‍💻 | Pomodone`}</title>
+				<title>{`${minutes < 10 ? "0" + minutes : minutes} : ${
+					seconds < 10 ? "0" + seconds : seconds
+				} 👩‍💻 | Pomodone`}</title>
 			</Helmet>
 			<div className="timer">
 				<CircularProgressbar
 					value={minutes}
 					maxValue={30}
-					text={`${minutes} : ${seconds}`}
+					text={`${minutes < 10 ? "0" + minutes : minutes} : ${
+						seconds < 10 ? "0" + seconds : seconds
+					}`}
 					styles={buildStyles({
 						textColor: "#2D27DC",
 						pathColor: "#2D27DC",
@@ -63,8 +65,11 @@ const Timer = () => {
 				/>
 				<div className="timer-btns">
 					<ResetButton resetHandler={resetHandler} />
-					<PlayButton playHandler={playHandler} />
-					<PauseButton pauseHandler={pausehandler} />
+					{playPause === "Play" ? (
+						<PauseButton pauseHandler={pausehandler} />
+					) : (
+						<PlayButton playHandler={playHandler} />
+					)}
 				</div>
 			</div>
 		</>

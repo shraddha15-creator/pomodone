@@ -26,7 +26,7 @@ const Timer = () => {
 			}, 1000);
 		}
 
-		return () => clearInterval(newTimer);
+		return () => clearTimeout(newTimer);
 	}, [seconds, playPause]);
 
 	const playHandler = () => {

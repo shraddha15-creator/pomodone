@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../Context/theme-context";
 import "./navbar.css";
@@ -27,14 +27,6 @@ const Navbar = () => {
 						<i className="fa fa-stopwatch"></i> Pomodoro
 					</span>
 				</Link>
-
-				{/* will work on this later on  */}
-
-				{/* <Link to="/settings">
-					<span className="links">
-						<i className="fas fa-cogs"></i> Settings
-					</span>
-				</Link> */}
 			</div>
 			<div
 				className="navbar-change-theme"

@@ -3,6 +3,7 @@
 
 :root {
     --primary-color: #2D27DC;
+    --light-purple: rgb(218, 213, 255);
     --primary-light: #FDFCFE;
     --primary-dark: #222222;
     --gray: #575761;
@@ -23,4 +24,12 @@ body {
 .dark-mode {
     background-color: var(--primary-dark);
     color: var(--primary-light);
+}
+
+@media(max-width:850px){
+    .App{
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
 }

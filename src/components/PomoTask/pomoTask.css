@@ -17,15 +17,23 @@
   font-weight: 400;
 }
 
-.pomo-tags {
-  display: flex;
-  gap: 3rem;
-  padding: 4rem 0;
+@media(max-width:1130px){
+  .pomo-task-item {
+  padding-left: 2rem;
+}
+  .pomo-task-description {
+    font-size: 1rem;
+  }
 }
 
-.pomo-tag-item {
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-  color: var(--gray);
-  padding: .5rem 1rem;
+@media(max-width:850px){
+  .pomo-task-item {
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+  .pomo-task-description {
+    font-size: .7rem;
+    padding-top: 1rem;
+  }
 }

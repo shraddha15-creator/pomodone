@@ -10,10 +10,6 @@
     align-items: end;
 }
 
-.brand-logo-png {
-    width: 25%;
-}
-
 .brand-name {
     font-size: 1.5rem;
     font-weight: 700;
@@ -37,7 +33,37 @@
 }
 
 .navbar-change-theme {
-    padding: 3rem 0;
+    /* padding: 3rem 0; */
     font-size: 1.5rem;
     transition: all .5s ease-in;
+}
+
+.theme-icon{
+    cursor: pointer;
+}
+
+@media(max-width:850px){
+    .brand-name {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .navbar-links {
+        gap: 2rem;
+        margin-top: 2rem;
+        font-size: .8rem;
+    }
+    .theme-icon{
+        font-size: 1rem;
+    }
+}
+@media(max-width:850px){
+    .pomo-navbar-container{
+        display: none;
+    }
+
+    .links {
+        color: var(--primary-dark);
+        font-weight: 600;
+    }
 }

@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import { useTheme } from "./Context/theme-context";
 import Home from "./pages/Home/Home";
@@ -21,6 +22,7 @@ function App() {
 					<Route path="/pomodoro/:task" element={<Pomodoro />} />
 					<Route path="/settings" element={<Settings />} />
 				</Routes>
+				<Footer />
 			</BrowserRouter>
 		</div>
 	);

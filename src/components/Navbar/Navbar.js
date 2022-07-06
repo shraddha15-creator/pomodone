@@ -28,16 +28,19 @@ const Navbar = () => {
 					</span>
 				</Link>
 			</div>
-			<div
-				className="navbar-change-theme"
-				onClick={() => setDarkMode((prev) => !prev)}
-			>
+			<span className="navbar-change-theme">
 				{darkMode ? (
-					<i className="fas fa-sun"></i>
+					<i
+						className="fas fa-sun theme-icon"
+						onClick={() => setDarkMode((prev) => !prev)}
+					></i>
 				) : (
-					<i className="fas fa-moon"></i>
-				)}
-			</div>
+					<i
+						className="fas fa-moon theme-icon"
+						onClick={() => setDarkMode((prev) => !prev)}
+					></i>
+				)}{" "}
+			</span>
 		</div>
 	);
 };

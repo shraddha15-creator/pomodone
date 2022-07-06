@@ -52,3 +52,23 @@
   font-size: 1rem;
   padding: 0 1rem;
 }
+
+@media (max-width: 850px) {
+  .tasks-container {
+    width: 73%;
+    margin: 0 0rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px){
+  .button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 460px){
+  .button {
+    font-size: 1rem;
+  }
+}

@@ -15,6 +15,7 @@ const Home = () => {
 					darkMode ? "dark-mode" : "light-mode"
 				}`}
 			>
+				<h2 className="brand-title-mobile">PomoDone</h2>
 				<span className="user-greeting">Hey, Welcome back!</span>
 
 				<img src={HeroImg} alt="hero-banner" className="hero-img" />
